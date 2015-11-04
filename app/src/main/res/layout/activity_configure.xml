@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".WidgetConfigActivity">
+
+    <EditText
+        android:id="@+id/editLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_label"
+        />
+
+    <EditText
+        android:id="@+id/editTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editLabel"
+        android:hint="@string/hint_to"
+        />
+
+    <EditText
+        android:id="@+id/editSubjectPrefix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTo"
+        android:hint="@string/hint_subject_prefix"
+        />
+
+    <EditText
+        android:id="@+id/editMessagePrefix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editSubjectPrefix"
+        android:hint="@string/hint_message_prefix"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editMessagePrefix"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@android:string/ok"
+            />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@android:string/cancel"
+            />
+    </LinearLayout>
+</RelativeLayout>

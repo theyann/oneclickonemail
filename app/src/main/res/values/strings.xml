@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">One Click One Mail</string>
+
+    <string name="text_to_prefix">To</string>
+    <string name="text_subject_prefix">Subject</string>
+    <string name="text_message_prefix">Message</string>
+    <string name="text_empty">Empty</string>
+    <string name="hint_label">Label</string>
+    <string name="hint_to">Send to</string>
+    <string name="hint_subject_prefix">Subject prefix</string>
+    <string name="hint_message_prefix">Message prefix</string>
+    <string name="error_mandatory">Value is mandatory and cannot be blank</string>
+</resources>
