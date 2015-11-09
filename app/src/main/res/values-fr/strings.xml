@@ -3,11 +3,13 @@
     <string name="app_name">One Click One Mail</string>
     <string name="error_mandatory">La valeur est obligatoire et ne peut être vide</string>
     <string name="hint_label">Étiquette</string>
-    <string name="hint_message_prefix">Préfixe du message</string>
-    <string name="hint_subject_prefix">Préfixe du sujet</string>
+    <string name="hint_message_prefix">Message</string>
+    <string name="hint_subject_prefix">Sujet</string>
     <string name="hint_to">Envoyer à</string>
     <string name="text_empty">Vide</string>
     <string name="text_message_prefix">Message</string>
     <string name="text_subject_prefix">Sujet</string>
     <string name="text_to_prefix">À</string>
+    <string name="no_items_create_widgets">Veuillez commencer en ajoutant un widget One Click One Mail sur l\'écran d\'accueil de votre appareil…\n\nCela se fait généralement en restant appuyé sur un espace vide de l\'écran d\'accueil, puis suivez les instructions.</string>
+    <string name="signature">Message envoyé via One Click One Mail par TechYOS</string>
 </resources>

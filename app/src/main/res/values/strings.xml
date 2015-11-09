@@ -10,4 +10,6 @@
     <string name="hint_subject_prefix">Subject prefix</string>
     <string name="hint_message_prefix">Message prefix</string>
     <string name="error_mandatory">Value is mandatory and cannot be blank</string>
+    <string name="no_items_create_widgets">Start by creating a One Click One Mail widget on your home screen…\n\nIt is generally done by long-pressing on a free space on the home screen, and then follow the instructions.</string>
+    <string name="signature">Message sent via One Click One Mail by TechYOS</string>
 </resources>

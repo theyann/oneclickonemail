@@ -3,6 +3,7 @@ package com.techyos.oneclickonemail.ui.activities;
 import android.appwidget.AppWidgetManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.techyos.oneclickonemail.adapters.WidgetListAdapter;
 import com.techyos.oneclickonemail.db.model.WidgetEntry;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends ActivityBase {
 
@@ -25,6 +27,9 @@ public class MainActivity extends ActivityBase {
      * Attributes
      */
 
+    private View mainLayout;
+    private View textNoWidgets;
+    private RecyclerView widgetListView;
     private WidgetListAdapter adapter;
 
     /**
@@ -36,8 +41,11 @@ public class MainActivity extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mainLayout = findViewById(R.id.layoutMain);
+        textNoWidgets = findViewById(R.id.textNoWidgets);
+
         // setting up the recycler view
-        final RecyclerView widgetListView = (RecyclerView) findViewById(R.id.widgetsListView);
+        widgetListView = (RecyclerView) findViewById(R.id.widgetsListView);
         widgetListView.setHasFixedSize(true);
         widgetListView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new WidgetListAdapter(this, new ArrayList<WidgetEntry>(), new View.OnClickListener() {
@@ -73,6 +81,16 @@ public class MainActivity extends ActivityBase {
      */
 
     private void refreshEntries() {
-        adapter.replaceAllEntries(getApp().getWidgetEntryDao().findAll());
+        List<WidgetEntry> entries = getApp().getWidgetEntryDao().findAll();
+        if (entries.isEmpty()) {
+            widgetListView.setVisibility(View.GONE);
+            textNoWidgets.setVisibility(View.VISIBLE);
+            mainLayout.setBackgroundResource(R.color.colorPrimaryDark);
+        } else {
+            widgetListView.setVisibility(View.VISIBLE);
+            textNoWidgets.setVisibility(View.GONE);
+            mainLayout.setBackgroundResource(android.R.color.white);
+            adapter.replaceAllEntries(entries);
+        }
     }
 }

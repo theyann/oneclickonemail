@@ -13,6 +13,8 @@
         android:id="@+id/editLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxLength="10"
+        android:maxLines="1"
         android:hint="@string/hint_label"
         />
 
@@ -21,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editLabel"
+        android:maxLines="2"
         android:hint="@string/hint_to"
         />
 
@@ -29,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTo"
+        android:maxLines="2"
         android:hint="@string/hint_subject_prefix"
         />
 
@@ -37,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editSubjectPrefix"
+        android:maxLines="4"
         android:hint="@string/hint_message_prefix"/>
 
     <LinearLayout

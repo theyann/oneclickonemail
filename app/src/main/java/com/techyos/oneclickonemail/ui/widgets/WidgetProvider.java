@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.ShareCompat;
 import android.widget.RemoteViews;
 
 import com.techyos.oneclickonemail.R;
@@ -41,10 +42,10 @@ public class WidgetProvider extends AppWidgetProvider {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_EMAIL, entry.getTo());
                 intent.putExtra(Intent.EXTRA_SUBJECT, entry.getSubjectPrefix());
-                intent.putExtra(Intent.EXTRA_TEXT, entry.getMessagePrefix());
-                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, entry.getMessagePrefix() + "\n\n\n" + context.getString(R.string.signature));
+                intent.setType("message/rfc822");
 
-                PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, Intent.createChooser(intent, "Send Email"), 0);
+                PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                 RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
                 views.setOnClickPendingIntent(R.id.layoutWidget, pendingIntent);

@@ -9,7 +9,8 @@
     android:layout_marginRight="@dimen/item_horizontal_margin"
     android:layout_marginStart="@dimen/item_horizontal_margin"
     android:layout_marginTop="@dimen/item_vertical_margin"
-    android:background="@color/colorBackgroundItem">
+    android:padding="8dp"
+    android:background="@drawable/bg_entry">
 
     <TextView
         android:id="@+id/textLabel"
