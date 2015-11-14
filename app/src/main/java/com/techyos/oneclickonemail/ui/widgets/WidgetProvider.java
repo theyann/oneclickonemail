@@ -5,7 +5,6 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.ShareCompat;
 import android.widget.RemoteViews;
 
 import com.techyos.oneclickonemail.R;
@@ -51,7 +50,7 @@ public class WidgetProvider extends AppWidgetProvider {
                 // and setting a type that will narrow the choice of apps that handle email related stuff
                 intent.setType("message/rfc822");
 
-                // creating pending intent, the flag is REALLY importat, and so is the appWidgetId
+                // creating pending intent, the flag is REALLY important, and so is the appWidgetId
                 PendingIntent pendingIntent = PendingIntent.getActivity(context, appWidgetId, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                 RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
