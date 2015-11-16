@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="4dp"
-    android:background="@drawable/bg_widget"
-    >
-
     <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/layoutWidget"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@null"
+        android:padding="4dp"
+        android:background="@drawable/bg_widget"
         >
+        <!--android:background="@null"-->
 
         <ImageView
             android:id="@+id/imageIcon"
@@ -45,5 +41,5 @@
             />
 
     </RelativeLayout>
-</FrameLayout>
+<!--</FrameLayout>-->
 
