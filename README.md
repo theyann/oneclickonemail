@@ -1,7 +1,6 @@
 # One Click One Mail: Configurable Showcase App #
 
-This app purpose is to showcase a few things explained on my blog.
-Urls with articles are coming.
+This app purpose is to showcase a few things explained [on my blog](http://www.yannicklemin.com/all-about-widgets).
 
 Showcased features:
 - basic DAO solution not requiring any ORM library
