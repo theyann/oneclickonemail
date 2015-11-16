@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
+import com.techyos.oneclickonemail.App;
 import com.techyos.oneclickonemail.R;
 import com.techyos.oneclickonemail.db.DbHelper;
 import com.techyos.oneclickonemail.db.dao.WidgetEntryDao;
@@ -26,7 +27,7 @@ public class WidgetProvider extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        WidgetEntryDao dao = new WidgetEntryDao(new DbHelper(context));
+        WidgetEntryDao dao = ((App)context.getApplicationContext()).getWidgetEntryDao();
 
         final int N = appWidgetIds.length;
 
